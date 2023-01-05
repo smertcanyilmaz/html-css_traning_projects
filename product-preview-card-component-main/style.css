@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root{
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --dark_blue: hsl(212, 21%, 14%);
+    --grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+* {
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    background: var(--Cream);
+    
+}
+
+.box {
+    background: var(--Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1440px;
+    height: 100vh;
+    
+   
+}
+
+.box img {
+    object-fit:contain;
+    max-height:430px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.box2 {
+    background: var(--White);
+    width: 385px;
+    height: 430px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: -2.5px;
+}
+
+.box3 {
+    margin: 1.5rem 5rem 1rem 2rem;
+}
+
+.box3 > h5, h1, p, .money1, .money2{
+    margin-bottom:20px;
+    
+}
+
+.box3 h5 {
+    
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: grey;
+   
+}
+
+
+.box3 h1 {
+    
+    font-family: fraunces;
+    color: var(--dark_blue);
+}
+
+.box3 p {
+    color: grey;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box4 .money1 {
+    
+    font-size: 40px;
+    font-weight: bold;
+    font-family: fraunces;
+    color: var(--Dark_cyan);
+}
+
+.box4 .money2 {
+
+    text-decoration:line-through;
+    font-size: small;
+    color:grey;
+    margin-left: 20px;
+    
+}
+.box4 {
+    display: flex;
+    align-items: center;
+}
+
+.box .button {
+    width: 300px;
+    height: 50px;
+    background-color: var(--Dark_cyan);
+    border-radius: 10px;
+    border-style: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.box .button:hover {
+    background: hsl(159, 36%, 28%);
+}
+
