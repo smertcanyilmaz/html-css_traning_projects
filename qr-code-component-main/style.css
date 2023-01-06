@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Sacramento&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(212, 45%, 89%);
+    --Grayish_blue: hsl(220, 15%, 55%);
+    --Dark_blue: hsl(218, 44%, 22%);
+}
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1440px;
+    height: 100vh;
+    background: var(--Light_gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    height: 55vh;
+    width: 288px;
+    background: var(--White);
+    border-radius: 20px;
+    padding: 15px 15px;
+    object-fit: contain;
+}
+
+.up img {
+   max-width: 258px;
+   max-height: 36vh;
+   border-radius: 10px;
+}
+
+.down h3 {
+    font-family:'outfit';
+    font-weight: bold;
+    text-align: center;
+    font-size: 23px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    color: var(--Dark_blue);
+}
+
+.down p {
+    font-family: 'outfit';
+    padding-top: 10px;
+    color: gray;
+    text-align: center;
+}
