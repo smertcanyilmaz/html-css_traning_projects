@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Sacramento&family=Varela+Round&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Moderate_violet: hsl(263, 55%, 52%);
+    --aa: hsl(217, 19%, 35%);
+    --Very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(0, 0%, 81%);
+    --bg: hsl(210, 46%, 95%);
+}
+
+body{
+    background: var(--bg);
+}
+.container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: var(--White);
+    font-family: 'Barlow Semi Condensed';
+}
+
+/* card styles */
+
+.card header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 13px;
+}
+
+.card header p {
+    opacity: 0.5;
+}
+
+.card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 10px;
+}
+
+.card-lead {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.card-desc {
+    font-size: 15px;
+    line-height:1.4;
+    opacity: 70%;
+}
+
+/* bg-colors */
+
+.bg-purple {
+    background:var(--Moderate_violet);
+    background-image:url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px; 
+}
+
+.bg-blue {
+    background: var(--aa);
+}
+
+.bg-dark-blue {
+    background: var(--Very_dark_blackish_blue);
+}
+
+.bg-white {
+    background: var(--White);
+    color: var(--aa);
+}
+
+/* grid section */
+
+.card:nth-of-type(1) {
+    grid-column: 1/ span 2;
+}
+
+.card:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1/ span 2;
+}
+
+.card:nth-of-type(4) {
+    grid-column: 2/ span 2;
+    grid-row: 2;
+}
+
+/* responsive section */
+
+@media (max-width: 768px) {
+ 
+    .container {
+
+        grid-template-columns: 1fr;
+        }
+
+        .card:nth-of-type(1) {
+            grid-column: 1;
+        }
+        .card:nth-of-type(2) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .card:nth-of-type(3) {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .card:nth-of-type(4) {
+            grid-column: 1;
+            grid-row: 4;
+        } 
+
+        .card:nth-of-type(5) {
+            grid-column: 1;
+            grid-row:5;
+        }
+}
