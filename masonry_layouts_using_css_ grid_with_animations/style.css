@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@500&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DFD3C3;
+    display: grid;
+    place-items: center;
+}
+.container {
+    background-color: #DFD3C3;
+    height: 90vh;
+    margin: 30px 60px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+}
+
+.box {
+    margin: 5px;
+    border-radius: 10px;
+    background-color:#F8EDE3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: transform 500ms ease-in-out;
+    position: relative;
+    z-index: 1;
+    line-height: 2rem;
+}
+
+/* grid section */
+
+.box:nth-of-type(1) {
+    grid-column: 1/ span 2;
+}
+
+.box:nth-of-type(7) {
+    grid-column: 2/ span 3;
+    grid-row: 3;
+}
+
+.box:nth-of-type(5) {
+    grid-column: 1;  /*Alternative: grid-area: 2 /1 / span 2 / auto; */
+    grid-row: 2 / span 2;
+   
+}
+
+.box:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 1/ span 2 ;
+}
+
+/* costumise in box */
+
+.box p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'poppins', serif;
+    color: #A8A8A8;
+}
+
+.box .robot-content {
+    margin: 20px;
+}
+
+.box img {
+    width: 100px;
+    max-height: 100px;
+    margin-bottom: 20px;
+   
+}
+
+.box .j-girl {
+    transition: transform 300ms ease;
+}
+
+.box .star {
+    position: absolute;
+    left: 190px;
+    bottom: 155px;
+    transition: transform 500ms linear;
+}
+
+.box .star img {
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+}
+
+/* hover and transform section  */
+
+.box:hover {
+    background-color: #EAE0DA;
+    cursor: pointer;
+    z-index: 2;
+    transform: scale(1.13);
+}
+
+.box .j-girl:hover {
+   
+    transform: translateY(-30px); 
+}
+
+.box:hover .star {
+    transform: translateY(-20px);
+}
+
+.box:hover .star img {
+    opacity: 1;
+}
+
+  /*  I made up a story :) */
+
+.box .cat {  
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    transition: transform 500ms linear;
+}
+
+.box .cat img {
+    width: 32px;
+    height: 32px;
+}
+
+.box:hover .cat {
+    transform: translate(30px, 30px);
+}
+
+.box:hover .cat img {
+    transform: rotate(60deg);
+}
+
+.box .heart {  
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    
+}
+
+.box .heart img {
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+}
+
+.box:hover .heart img {
+    transition: transform 500ms linear;
+    transform: rotate(60deg);
+    opacity: 1;
+}
+
+.box:hover .walk img {
+    transition: transform 500ms linear;
+    transform: translateX(100px);
+}
+
+.box> label  {
+    color: lightpink;
+    opacity: 0;
+    position: absolute;
+    top: 85px;
+    right: 190px;
+    font-size: 10px;
+    
+}
+
+.box:hover > label {
+    opacity: 1;
+    font-weight: 600;
+    transition: transform 500ms linear;
+    transform: rotate(-40deg) translateY(-30px);
+    font-size: 15pxs;
+}
+
+/* responsive section */
+
+@media (max-width:768px) {
+
+    .container {
+  
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box:nth-of-type(1) {
+        grid-column: 1;
+    }
+    
+    .box:nth-of-type(7) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .box:nth-of-type(5) {
+        grid-column: 1; 
+        grid-row: 2 ;
+       
+    }
+    
+    .box:nth-of-type(2) {
+        grid-column: 1;
+        grid-row: 1 ;
+    }
+
+    .box .cat {  
+        position: absolute;
+        top: 60px;
+        right: 350px;
+     
+    }
+    
+    .box .cat img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .box:hover .cat {
+        
+        animation: anicat 1500ms forwards;
+    }
+    
+    .box:hover .cat img {
+        transform: none;
+        transition: none;
+    }
+
+    @keyframes anicat {
+        from {left: 65px;}
+        to {left: 200px;}
+      }
+ 
+    .box > label {
+        visibility: hidden;
+    }
+    
+}
