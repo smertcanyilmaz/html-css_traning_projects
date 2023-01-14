@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@500&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 60%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* main boxes  */
+
+.signup-box {
+    background-color: #4B0082;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect-box {
+    background-color: #F9F6EE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ /* form and its classes */
+
+.signup-box form{
+    padding: 40px;
+    height: 60vh;
+    width: 432px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.textbox {
+    width: 300px;
+    height: 40px;
+    border: 2px solid lightgray;
+    background-color: transparent;
+    color: #fff;
+    outline:none;
+}
+
+::placeholder {
+    color: gray;
+    padding-left: 6px;
+}
+
+/*Social*/
+
+.connect-box .social {
+    width: 300px;
+    height: 50px;
+    color: #fff;
+    font-size: 12px;
+    padding: 15px 20px;
+    display: block;
+}
+
+.social:nth-child(1){
+    background-color: #4267B2;
+    cursor: pointer;
+}
+
+.social:nth-child(2) {
+     background-color: #1DA1F2;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     cursor: pointer;
+}
+
+.social:nth-child(3){
+    background-color: #EA4335;
+    cursor: pointer;
+}
+
+/* innerbox  */
+
+.inner-box {
+    width: 300px;
+    height: 100px; 
+}
+
+.inner-box .btn {
+    width: 300px;
+    height: 40px; 
+    margin-top: 20px;  
+}
+
+
+.inner-box label {
+    color: lightgray;
+}
+
+.a  {
+    margin-left: 20px;
+}
+
+.btn {
+    cursor: pointer;
+}
