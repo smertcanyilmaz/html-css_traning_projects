@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@500&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 100%;
+    height:100vh;
+    font-family: 'Poppins', cursive;
+    background: #333;
+    position: relative;
+}
+
+#container:before {
+    content: '';
+    background: url('pexels-josh-sorenson-59516.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100vh;
+    opacity: 0.4;
+  }
+
+/* navbar section */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 130px;  
+    position: relative;
+
+}
+
+.navbar img {
+    height: 90px;
+    width: 130px;
+    object-fit: contain;   
+}
+
+.navbar ul {
+    position: absolute;
+    right: 220px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;  /* padding yerine margin vermek hover kısmında daha sağlıklı sonuçlar veriyor */
+    color: #fff;
+}
+
+/* button section  */
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: lightcoral;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+.nav-button i {
+    margin-right: 10px;
+}
+
+.btn-1 {
+    background: transparent;
+    border-style: none;
+    color: #fff;
+    font-family: 'Poppins', cursive;
+    font-size: 15px;
+}
+
+.content .btn-2 {
+    padding: 5px 20px;
+    background-color: lightcoral;
+    color: #fff;
+    border-radius: 5px;
+    border-style: none;  
+    font-family: 'Poppins', cursive;  
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: lightcoral;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* content section  */
+
+.content {
+    position: absolute;
+    width: 40%;
+    left: 130px;
+    top: 30vh; 
+}
+
+.inner-content h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.content .form {
+    margin-top: 50px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.content .textbox {
+    width: 70%;
+    height: 45px;
+    margin-right: 40px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+    border-style: none;
+}
+
+::placeholder {
+    padding: 10px auto;
+    font-size: 15px;
+    color: #333;
+    opacity: 0.8;
+}
+
+/* hover section  */
+  
+.navbar ul li:hover {
+    cursor: pointer;
+    color: rgb(239, 98, 98);
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    background-color: rgb(239, 98, 98);
+}
+
+.btn-1:hover {
+    cursor: pointer;
+    background-color: rgb(239, 98, 98);
+}
+
+.btn-2:hover {
+    cursor: pointer;
+    background-color: rgb(239, 98, 98);
+}
+
+
